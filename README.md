@@ -56,4 +56,5 @@ This will be converted to NRL Linje
 ### NRL GeoJSON data format documentation
 
 This format is spesified by Kartverket and NRL. See documentation here: [Link](https://nrl-test.kartverket.no/nrl/swagger-ui/index.html?urls.primaryName=ekstern)
+
 If this format is chosen the application will not do any conversion at this moment in time
