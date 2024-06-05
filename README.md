@@ -29,3 +29,21 @@ The application will create a log spesified to each user. This log will include 
   - Response Data: Link to the validation response data
 
 ### Trimble NIS Excel data format documentation
+
+The Excel file is based on a Trimble export format with some addons. The Excel format will at this point in time only support NRL Mast and NRL Linje as objects. Comming soon: NRL Flate
+
+The Excel file conists of 2 sheets that needs to be named correctly. You can provide only one of the two if needed or both.
+
+#### Sheet1: Mast
+This will be converted to NRL Mast
+
+
+
+#### Sheet2: Trase Element
+This will be converted to NRL Linje
+
+| ID  | Tabell ID | x1 | y1 | z1 | x2 | y2 | z2 | Lengde (m) | Betegnelse | Luftspenntype (NRL) | Luftfartshinderlyssetting (NRL) | Luftfartshindermerking (NRL) | Hoydereferanse (NRL) | Vertikalavstand meter (NRL) | Verifisert nøyaktighet (NRL) | Status (NRL) | ACLineSegmentSpan_uuid | ACLineSegmentSpanDeployment_uuid | Name_sourceId_uuid |
+|-----|-----------|----|----|----|----|----|----|------------|------------|---------------------|---------------------------------|-----------------------------|----------------------|-----------------------------|-----------------------------|--------------|-------------------------|----------------------------------|---------------------|
+| Internal id. Converts to Komponentkodeverdi. If you do not provide your own uuid this will be mapped to a generated uuid (Required) | Application spesific. Must be: 261 (Required) | x starting coordinate in UTM32 (Required) | y starting coordinate in UTM32 (Required) | z starting coordinate in UTM32 (Optional) | x ending coordinate in UTM32 (Required) | y ending coordinate in UTM32 (Required) | z ending coordinate in UTM32 (Optional) | Length of the line i meter (Required) | Name of the line (optional) | Options: Ledning, høyspent or Ledning, lavspent (Required) | Options: Lyssatt or Mellomintensitet, type A or Mellomintensitet, type B or Mellomintensitet, type C (Optional) | Options: Fargemerking or Markør (Optional) | Options: Topp (Optional) | The heighest distance from the ground to the line in meters | Options: FOR-2020-10-16-2068, §5(1) (Required) | Options: Eksisterende or Fjernet or Planlagt fjernet or Planlagt oppført (Required) | The main uuid for the line (Optional: A uuid will be created if not provided here) | The deployment uuid of the line (Optional: A uuid will be created if not provided here) | The Name uuid of the line (Optional: A uuid will be created if not provided here) |
+
+### NRL GeoJSON data format documentation
