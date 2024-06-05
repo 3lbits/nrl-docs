@@ -17,7 +17,7 @@ If the input file is NRL GeoJSON it will be stored if that is chosen. Then the N
 2. The user must choose a file that are spesified by the chosen format
 3. The user must choose if the input data should be stored or not. The validation data will be stored anyway
 4. The user must push the Upload button
-5. The application will provide som status comments during the operation to tell what happens. It will also tell if something failed
+5. The application will provide some status comments during the operation to tell what happens. It will also tell if something failed
 
 #### How to use the Upload User Log
 
