@@ -21,7 +21,7 @@ If the input file is NRL GeoJSON it will be stored if that is chosen. Then the N
 
 #### How to use the Upload User Log
 
-The application will create a log spesified to each user. This log will include som message data like TimeStamp and the the data that is sent to ElBits and the validation response from NRL. The data is sent to ElBits will only be stored if the user have spesified that it should be stored. **Mark that you might have some issues linking the Excel file and the validation response if you have not provided the uuids (See Trimble NIS Excel data format documentation section)**
+The application will create a log spesified to each user. This log will include som message data like TimeStamp and the the data that is sent to ElBits and the validation response from NRL. The data sent to ElBits will only be stored if the user have spesified that it should be stored. **Mark that you might have some issues linking the Excel file and the validation response if you have not provided the uuids (See Trimble NIS Excel data format documentation section)**
 
 - The Log have 3 columns
   - TimeStamp (Sorting is based on this column)
