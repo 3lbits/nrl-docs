@@ -13,7 +13,7 @@ If the input file is NRL GeoJSON it will be stored if that is chosen. Then the N
 **Mark: The validation response is async which means it might take some seconds before it shows in the Log**
 
 #### How to upload a file
-1. The user must spesify which input file it will provide by choosing input format. Options: Trimble NIS Excel, NRL GeoJSON
+1. The user must spesify which input file it will provide by choosing input format. Options: Trimble NIS Excel or NRL GeoJSON
 2. The user must choose a file that are spesified by the chosen format
 3. The user must choose if the input data should be stored or not. The validation data will be stored anyway
 4. The user must push the Upload button
