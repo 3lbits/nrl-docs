@@ -36,7 +36,7 @@ The Excel file conists of 2 sheets that needs to be named correctly. You can pro
 
 **Marks:**
 - **Optional values can be empty, but the column must exist**
-- **For NRL Linje we will use Topp as Høydereferanse even if you have provided. If Fot is provided we will convert the z coordinate by adding vertikalavstand**
+- **For NRL Linje we will use Topp as Høydereferanse even if you have provided Fot. If Fot is provided we will convert the z coordinate by adding vertikalavstand**
 - **Coordinate systems supported at this moment is EPSG::25832 (2 dimensions) and EPSG::5972 (3 dimensions). These are based on UTM32 with heigh above sea level for z (3 dimension)**
 
 #### Sheet1: Mast
