@@ -35,7 +35,7 @@ The Excel file is based on a Trimble export format with some addons. The Excel f
 The Excel file conists of 2 sheets that needs to be named correctly. You can provide only one of the two if needed or both.
 
 **Marks:**
-- **Optional values can be empty, but the column still must exist**
+- **Optional values can be empty, but the column must exist**
 - **For NRL Linje we will use Topp as Høydereferanse even if you have provided. If Fot is provided we will convert the z coordinate by adding vertikalavstand**
 - **Coordinate systems supported at this moment is EPSG::25832 (2 dimensions) and EPSG::5972 (3 dimensions). These are based on UTM32 with heigh above sea level for z (3 dimension)**
 
