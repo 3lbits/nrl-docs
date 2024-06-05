@@ -30,8 +30,10 @@ The application will create a log spesified to each user. This log will include 
 
 ### Trimble NIS Excel data format documentation
 
-The Excel file is based on a Trimble export format with some addons. The Excel format will at this point in time only support NRL Mast and NRL Linje as objects. Comming soon: NRL Flate
+The Excel file is based on a Trimble export format with some addons. The Excel format will at this point in time only support NRL Mast and NRL Linje as objects. Comming soon: NRL Flate.
+
 The Excel file conists of 2 sheets that needs to be named correctly. You can provide only one of the two if needed or both.
+
 **Marks:**
 - **Optional values can be empty, but the column still must exist**
 - **For NRL Linje we will use Topp as Høydereferanse even if you have provided. If Fot is provided we will convert the z coordinate by adding vertikalavstand**
