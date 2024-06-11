@@ -6,10 +6,13 @@ ElBits NRL API støtter asynkron innsending av NRL data til Kartverket for regist
 
 Endepunktadresser
 
-Dev:  https://nrl-api.dev.elbits.no
-Prod:   https://nrl-api.elbits.no
+| Miljø          | Url   |
+| ------------- | ------------- |
+| Dev     | https://nrl-api.dev.elbits.no  |
+| Prod     | https://nrl-api.elbits.no  |
 
-OpenAPI dokumentasjon for APIet er tilgjengelig i dev-miljø: https://nrl-api.dev.elbits.no/swagger/index.html
+
+OpenAPI/Swagger-dokumentasjon for APIet er tilgjengelig i dev-miljø: https://nrl-api.dev.elbits.no/swagger/index.html
 
 ## Authentication
 
@@ -36,7 +39,7 @@ Kallet returnerer et resultat av operasjonen i form at en melding på følgende fo
 }
 ```
 
-| First Header  | Second Header |
+| Felt          | Beskrivelse   |
 | ------------- | ------------- |
 | messageId     | Id tildelt meldingen som vil gjenfinnes når man senere henter ut resultatet av prosesseringen  |
 | publishTime   | Tidspunktet innsendte data ble sendt videre for asynkron prosessering  |
@@ -48,12 +51,12 @@ Hvis innsending av data var vellykket vil det igangsettes an asynkron prosesseri
 prosesseringen vil være tilgjengelig som en separat melding i endepunkt for *responsemessages*
 
 
-###Innsending av CIM for validering
+### Innsending av CIM for validering
 
-###Innsending av NRL GeoJSON for registrering
+### Innsending av NRL GeoJSON for registrering
 
 Se Kartverkets dokumentasjon for informasjon om hvordan GeoJson brukes for NRL:  https://sosi.geonorge.no/produktspesifikasjoner/NRL-rapportering/
 
-###Innsending av NRL GeoJSON for validering
+### Innsending av NRL GeoJSON for validering
 
-###Uthenting av resultater av registrering og validering
+### Uthenting av resultater av registrering og validering
