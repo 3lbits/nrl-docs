@@ -1,34 +1,38 @@
 # ElBits NRL API
 
-ElBits NRL API støtter asynkron innsending av NRL data til Kartverket for registrering eller validering. APIet støtter innsending på både CIM JSON-LD format og Karverkets NRL GeoJSON format. Selve prosesseringen av data skjer asynkront slik at man først sender inn data og så etterpå henter ut resultatet av registreringen eller valideringen via et annet endepunkt.
+ElBits NRL API stÃ¸tter asynkron innsending av NRL data til Kartverket for registrering eller validering. APIet stÃ¸tter innsending pÃ¥ bÃ¥de CIM JSON-LD format og Karverkets NRL GeoJSON format. Selve prosesseringen av data skjer asynkront slik at man fÃ¸rst sender inn data og sÃ¥ etterpÃ¥ henter ut resultatet av registreringen eller valideringen via et annet endepunkt.
 
 ## Bruk av API
 
 Endepunktadresser
 
-| Miljø          | Url   |
+| MiljÃ¸          | Url   |
 | ------------- | ------------- |
 | Dev     | https://nrl-api.dev.elbits.no  |
 | Prod     | https://nrl-api.elbits.no  |
 
 
-OpenAPI/Swagger-dokumentasjon for APIet er tilgjengelig i dev-miljø: https://nrl-api.dev.elbits.no/swagger/index.html
+OpenAPI/Swagger-dokumentasjon for APIet er tilgjengelig i dev-miljÃ¸: https://nrl-api.dev.elbits.no/swagger/index.html
 
 ## Authentication
 
-APIet er sikret med Bearer token som hentes med standard OAuth2 client credentials flow. Ta kontakt med NRL-teamet for å få opprettet klienter for testing og/eller produksjon. Bruk gjerne et bibliotek til å håndtere tokens, feks Duende.AccessTokenManagement for .NET.
+APIet er sikret med Bearer token som hentes med standard OAuth2 client credentials flow. Ta kontakt med NRL-teamet for Ã¥ fÃ¥ opprettet klienter for testing og/eller produksjon. Bruk gjerne et bibliotek til Ã¥ hÃ¥ndtere tokens, feks Duende.AccessTokenManagement for .NET.
 
 > [!NOTE]
-> Husk å gjenbruke access tokens innenfor levetiden istedenfor å hente nytt for hver request.
+> Husk Ã¥ gjenbruke access tokens innenfor levetiden istedenfor Ã¥ hente nytt for hver request.
 
-Se også dokumentasjon for [Altinn-oppsett](../pages/altinn.md)
+Se ogsÃ¥ dokumentasjon for [Altinn-oppsett](../pages/altinn.md)
+
+## Bruk av API
+
+NRL-APIet er et HTTP basert API hvor man typisk sender inn data ved bruk av et POST kall og sÃ¥ etterpÃ¥ henter ut resultatet ved bruk av et GET kall til endepunktet for responsemeldinger. Avhengig av mengden objekter som sendes inn kan det ta litt til fÃ¸r resultatet for alle objektene er tilgjengelig som en responsemelding.
 
 
-###Innsending av CIM for registrering
+### Innsending av CIM for registrering
 
-Innsending av data på CIM JSON-LD format gjøres ved bruk av POST mot endepunkt /cim. Endepunktet tar i mot en melding på CIM-format i body.
+Innsending av data for registrering pÃ¥ CIM JSON-LD format gjÃ¸res ved bruk av POST mot endepunkt /cim. Endepunktet tar i mot en melding pÃ¥ CIM-format i body.
 
-Kallet returnerer et resultat av operasjonen i form at en melding på følgende format
+Kallet returnerer et resultat av operasjonen i form at en melding pÃ¥ fÃ¸lgende format
 
 ```
 {
@@ -42,21 +46,27 @@ Kallet returnerer et resultat av operasjonen i form at en melding på følgende fo
 
 | Felt          | Beskrivelse   |
 | ------------- | ------------- |
-| messageId     | Id tildelt meldingen som vil gjenfinnes når man senere henter ut resultatet av prosesseringen  |
+| messageId     | Id tildelt meldingen som vil gjenfinnes nÃ¥r man senere henter ut resultatet av prosesseringen  |
 | publishTime   | Tidspunktet innsendte data ble sendt videre for asynkron prosessering  |
-| succeded      | Flagg som indikerer om selve innsendingen av vellykket eller ikke. Dette indikerer altså ikke om registrering var vellykket, bare om selve innsendingen gikk bra eller ikke.  |
+| succeded      | Flagg som indikerer om selve innsendingen av vellykket eller ikke. Dette indikerer altsÃ¥ ikke om registrering var vellykket, bare om selve innsendingen gikk bra eller ikke.  |
 | errorMessage  | En eventuell feilmelding hvis innsendingen feilet av en eller annen grunn  |
 | statusMessage | Fritekstinformasjon om resultatet av innsendingen  |
 
 Hvis innsending av data var vellykket vil det igangsettes an asynkron prosessering av innsendte data. Hvert enkelt objekt vil bli prosessert hver for seg og resultatet av
-prosesseringen vil være tilgjengelig som en separat melding i endepunkt for *responsemessages*
+prosesseringen vil vÃ¦re tilgjengelig som en separat melding i endepunkt for *responsemessages*
 
 
 ### Innsending av CIM for validering
 
+Innsending av data for validering pÃ¥ CIM JSON-LD format gjÃ¸res pÃ¥ samme mÃ¥te som for registrering, men endepunkt som skal brukes her er /cim/validate.
+
+Response for innsending for validering er identisk som for innsending for registrering som beskrevet ovenfor.
+
+
+
 ### Innsending av NRL GeoJSON for registrering
 
-Se Kartverkets dokumentasjon for informasjon om hvordan GeoJson brukes for NRL:  https://sosi.geonorge.no/produktspesifikasjoner/NRL-rapportering/
+Se ellers Kartverkets dokumentasjon for informasjon om hvordan GeoJson brukes for NRL:  https://sosi.geonorge.no/produktspesifikasjoner/NRL-rapportering/
 
 ### Innsending av NRL GeoJSON for validering
 
