@@ -39,7 +39,7 @@ NRL-APIet er et HTTP basert API hvor man typisk sender inn data ved bruk av et P
 </br>
 </br>
 
-### :large_blue_circle: Innsending av CIM for registrering
+### Innsending av CIM for registrering
 
 Innsending av data for registrering på CIM JSON-LD format gjøres ved bruk av POST mot endepunkt `/cim`. Endepunktet tar i mot en melding på CIM-format i body.
 
@@ -59,7 +59,7 @@ Kallet returnerer et resultat av operasjonen i form at en melding på følgende 
 | ------------- | ------------- |
 | messageId     | Id tildelt meldingen som vil gjenfinnes når man senere henter ut resultatet av prosesseringen  |
 | publishTime   | Tidspunktet innsendte data ble sendt videre for asynkron prosessering  |
-| succeeded      | Flagg som indikerer om selve innsendingen av vellykket eller ikke. Dette indikerer altså ikke om registrering var vellykket, bare om selve innsendingen gikk bra eller ikke.  |
+| succeeded      | Flagg som indikerer om selve innsendingen var vellykket eller ikke. Dette indikerer kun om selve innsendingen gikk bra, og sier ikke noe om hvorvidt prosessering av meldingen i NRL gikk bra |
 | errorMessage  | En eventuell feilmelding hvis innsendingen feilet av en eller annen grunn  |
 | statusMessage | Fritekstinformasjon om resultatet av innsendingen  |
 
@@ -69,7 +69,7 @@ prosesseringen vil være tilgjengelig som en separat melding i endepunkt for *re
 </br>
 </br>
 
-### :large_blue_circle: Innsending av CIM for validering
+### Innsending av CIM for validering
 
 Innsending av data for validering på CIM JSON-LD format gjøres på samme måte som for registrering, men endepunkt som skal brukes her er `/cim/validate`.
 
@@ -78,9 +78,9 @@ Response for innsending for validering er identisk som for innsending for regist
 </br>
 </br>
 
-### :large_blue_circle: Innsending av NRL GeoJSON for registrering
+### Innsending av NRL GeoJSON for registrering
 
-Innsending av data for registrering på NRl GeoJSON-format gjøres ved bra av POST mot endpunkt `/nrlgeojson`. Endpunktet tar imot en melding på GeoJSON-format i body.
+Innsending av data for registrering på NRl GeoJSON-format gjøres ved bruk av POST mot endpunkt `/nrlgeojson`. Endpunktet tar imot en melding på GeoJSON-format i body.
 
 Kallet returnerer et resultat av operasjon på samme format som ved innsending på CIM-format. Se [Innsending av CIM for registrering](https://github.com/3lbits/nrl-docs/edit/feature/api_doc/pages/nrl-api.md#innsending-av-cim-for-registrering)
 
@@ -89,14 +89,14 @@ Se ellers Kartverkets [dokumentasjon for NRL-rapportering](https://sosi.geonorge
 </br>
 </br>
 
-### :large_blue_circle: Innsending av NRL GeoJSON for validering
+###  Innsending av NRL GeoJSON for validering
 
-Innsending av data for validering av data på NRL GeoJSON-format gjøres ved bra av POST mot endpunkt  `/nrlgeojson/validate`, og fungerer ellers likt som for innsending for registrering av data på NRL GeoJSON-format.
+Innsending av data for validering av data på NRL GeoJSON-format gjøres ved bruk av POST mot endpunkt  `/nrlgeojson/validate`, og fungerer ellers likt som for innsending for registrering av data på NRL GeoJSON-format.
 
 </br>
 </br>
 
-### :large_blue_circle: Uthenting av resultater av registrering og validering
+### Uthenting av resultater av registrering og validering
 
 Etter hvert som prosesseringen av de innsendte objektene blir ferdig kan resultatene hentes ut ved bruk at HTTP GET mot endepunkt `/responsemessages`. Samme endepunkt brukes for å hente ut resultat for registrering og validering av data for både CIM- og NRL GeoJSON-format.
 
@@ -120,7 +120,7 @@ Response på dette kallet er et array av objekter på følgende format
 | succeeded     | Flagg som indikerer om selve registrering/validering var vellykket.  |
 | message       | En melding som beskriver resultatet av prosessering. Ved feil vil denne inneholder beskrivelse av feilen  |
 
-Så ved en innsending av en melding med f.eks. 500 objekter vil man her få tilbake en response for hvert av objektene man sendte inn. Responsemeldingen vil inneholde resultat for hvert av objektene som er prosessert så langt, så avhengig av hvor mange objekter som skal prosesseres må man muligens gjøre flere kan til endepunktet før man får ut resultat for alle objektene man  sendte inn.
+Så ved en innsending av en melding med f.eks. 500 objekter vil man her få tilbake en response for hvert av objektene man sendte inn. Responsemeldingen vil inneholde resultat for hvert av objektene som er prosessert så langt, så avhengig av hvor mange objekter som skal prosesseres må man muligens gjøre flere kall til endepunktet før man får ut resultat for alle objektene man  sendte inn.
 
 
 Eksempel på responsemelding hvor to av objektene har blitt registrert, mens et av objektene har en feil som må utbedres før man forsøker registrering på nytt:
