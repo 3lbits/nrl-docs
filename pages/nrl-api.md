@@ -146,24 +146,3 @@ Eksempel på responsemelding hvor to av objektene har blitt registrert, mens et 
   }
 ]
 ```
-
-Eksempel på responsemelding for validering av to objekter hvor ett objekt har blir validert som riktig, mens ett har får valideringsfeil på "LineMarkingKind"
-
-```
-[
-  {
-    "messageId": "695431e2-920f-49dd-a1bc-030842c6b652",
-    "objectId": "c2903580-2faa-48b1-8f12-a538f647d9dc",
-    "succeeded": true,
-    "message": "NRL-validation succeeded"
-  },
-  {
-    "messageId": "695431e2-920f-49dd-a1bc-030842c6b652",
-    "objectId": "",
-    "succeeded": false,
-    "message": "Exception during handling of message: Unhandled LineMarkingKind https://cim4.eu/ns/nc-no#LineMarkingKind.lys"
-  }
-]
-```
-
-
