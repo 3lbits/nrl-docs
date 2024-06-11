@@ -1,6 +1,6 @@
 # ElBits NRL API
 
-ElBits NRL API støtter asynkron innsending av NRL data til Kartverket for registrering eller validering. APIet støtter innsending på både CIM JSON-LD format og Kartverkets NRL GeoJSON format. Selve prosesseringen av data skjer asynkront slik at man først sender inn data og så etterpå henter ut resultatet av registreringen og valideringen via et annet endepunkt.
+ElBits NRL API tilbyr asynkron innsending av NRL data til Kartverket for registrering eller validering. APIet støtter innsending på både CIM JSONLD-format og Kartverkets NRL GeoJSON-format. Selve prosesseringen av data skjer asynkront slik at man først sender inn data og så etterpå henter ut resultatet av registreringen og valideringen via et annet endepunkt.
 
 </br>
 </br>
