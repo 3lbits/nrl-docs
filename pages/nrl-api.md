@@ -21,6 +21,7 @@ APIet er sikret med Bearer token som hentes med standard OAuth2 client credentia
 > [!NOTE]
 > Husk å gjenbruke access tokens innenfor levetiden istedenfor å hente nytt for hver request.
 
+Se også dokumentasjon for [Altinn-oppsett](../pages/altinn.md)
 
 
 ###Innsending av CIM for registrering
