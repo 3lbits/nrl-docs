@@ -35,7 +35,10 @@ The Excel file conists of 2 sheets that needs to be named correctly. You can pro
 - **Optional values can be empty, but the column must exist**
 - **For NRL Linje we will use Topp as Høydereferanse even if you have provided Fot. If Fot is provided we will convert the z coordinate by adding vertikalavstand**
 - **Coordinate systems supported at this moment is EPSG::25832 (2 dimensions) and EPSG::5972 (3 dimensions). These are based on UTM32 with heigh above sea level for z (3 dimension)**
-
+- **ID coloumn is required.**
+  - **If you use a uuid, you need to as minimum fill out ID, and OverheadStructure_uuid or ACLineSegmentSpan_uuid, with that uuid.**
+  - **If you have not a uuid, you only need to use the ID column as minimum. Reason: uuids are generated and linked to the ID column.**
+ 
 ### Sheet1: Mast
 This will be converted to NRL Mast
 
