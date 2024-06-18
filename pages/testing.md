@@ -8,8 +8,8 @@ Test-organisasjonene i tabellen under er konfigurert opp til at Elbits kan sende
 | --------- | ----------- | ----------- |
 | 310671304 | 27915994771 | Elbits/Lede |
 | 314007735 | 25847198322 | Elbits      |
-| 314121287 | 14826295792 | lnett       |
-| 312753332 | 04834599991 | BKK         |
+| 314121287 | 14826295792 | BKK         |
+| 312753332 | 04834599991 | lnett       |
 | 312822318 | 11897897174 | Glitre      |
 
 ## Se data i kart
