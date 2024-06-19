@@ -31,6 +31,8 @@ The Excel file is based on a Trimble export format with some addons. The Excel f
 
 The Excel file conists of 2 sheets that needs to be named correctly. You can provide only one of the two if needed or both.
 
+A Template file can be found [here](https://github.com/3lbits/nrl-docs/blob/main/templates/nrl_uploader_Trimble_NIS_template.xlsx). Use the download file button to see and use content
+
 **Marks:**
 - **Optional values can be empty, but the column must exist**
 - **For NRL Linje we will use Topp as Høydereferanse even if you have provided Fot. If Fot is provided we will convert the z coordinate by adding vertikalavstand**
