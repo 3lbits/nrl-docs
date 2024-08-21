@@ -17,6 +17,19 @@ Endepunktaddresser
 
 OpenAPI/Swagger-dokumentasjon for APIet er tilgjengelig i dev-miljø: https://nrl-api.dev.elbits.no/swagger/index.html
 
+</br>
+</br>
+
+## Authentication
+
+APIet er sikret med Bearer token som hentes med standard OAuth2 client credentials flow. Ta kontakt med NRL-teamet for å få opprettet klienter for testing og/eller produksjon. Bruk gjerne et bibliotek til å håndtere tokens, feks Duende.AccessTokenManagement for .NET. Endepunkter for access tokens vises under.
+
+| Miljø | Url |
+| ----- | ------------------------------------------- |
+| Dev   | https://id-mock.dev.elbits.no/connect/token |
+| Prod  | https://id.elbits.no/connect/token          |
+
+
 Basic C# example code for getting an access token for authenticating calls to the NRL API.
 
 ```
@@ -44,19 +57,6 @@ Basic C# example code for getting an access token for authenticating calls to th
         }
 
 ```
-
-
-</br>
-</br>
-
-## Authentication
-
-APIet er sikret med Bearer token som hentes med standard OAuth2 client credentials flow. Ta kontakt med NRL-teamet for å få opprettet klienter for testing og/eller produksjon. Bruk gjerne et bibliotek til å håndtere tokens, feks Duende.AccessTokenManagement for .NET. Endepunkter for access tokens vises under.
-
-| Miljø | Url |
-| ----- | ------------------------------------------- |
-| Dev   | https://id-mock.dev.elbits.no/connect/token |
-| Prod  | https://id.elbits.no/connect/token          |
 
 > [!NOTE]
 > Husk å gjenbruke access tokens innenfor levetiden istedenfor å hente nytt for hver request.
