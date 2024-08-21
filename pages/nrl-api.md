@@ -30,7 +30,7 @@ APIet er sikret med Bearer token som hentes med standard OAuth2 client credentia
 | Prod  | https://id.elbits.no/connect/token          |
 
 
-Basic C# example code for getting an access token for authenticating calls to the NRL API.
+Basic C# example code for getting an access token for authenticating calls to the NRL API. Not for production use!
 
 ```
         var formData = new Dictionary<string, string>
@@ -48,7 +48,8 @@ Basic C# example code for getting an access token for authenticating calls to th
 
             if (response.IsSuccessStatusCode)
             {
-                var accessToken = await response.Content.ReadAsStringAsync();
+                //Use access token as bearer token in API http calls
+                accessToken = await response.Content.ReadAsStringAsync();
             }
             else
             {
