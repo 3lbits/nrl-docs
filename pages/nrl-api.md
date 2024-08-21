@@ -17,6 +17,35 @@ Endepunktaddresser
 
 OpenAPI/Swagger-dokumentasjon for APIet er tilgjengelig i dev-miljø: https://nrl-api.dev.elbits.no/swagger/index.html
 
+Basic example code for getting an access token for authenticating calls to the NRL API.
+
+```
+        var formData = new Dictionary<string, string>
+        {
+            {"grant_type", "client_credentials"},
+            {"client_id", "<client id here>" },
+            {"client_secret", "<client secret here>"}
+
+        };
+
+        using (var client = new HttpClient())
+        {
+            var content = new FormUrlEncodedContent(formData);
+            var response = await client.PostAsync("https://id-mock.dev.elbits.no/connect/token", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var accessToken = await response.Content.ReadAsStringAsync();
+            }
+            else
+            {
+                throw new Exception("Unable to get access token");
+            }
+        }
+
+```
+
+
 </br>
 </br>
 
