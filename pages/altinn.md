@@ -3,9 +3,10 @@ Nettselskapet må delegere tilgang til scopet kartverk:nrl.rapportering til Elbi
 
 ## Delegering av scope
 Fremgangsmåte:
-1. Daglig leder (eller en person som daglig leder har deleger rollen “Programmeringsgrensesnitt (API)” til, se under) logger inn i Altinn. Velg å representere nettselskapet, ikke personen.
+1. Daglig leder (eller en person som daglig leder har deleger rollen “Programmeringsgrensesnitt (API)” til, se under) logger inn i Altinn. Velg å representere nettselskapet, ikke personen.  
+![image](https://github.com/user-attachments/assets/3537fec8-cf46-4019-a4a4-9d13e53dfeab)
 1. Velg “Profil” øverst.
-1. Trykk “Tilgang til programmeringsgrensesnitt - API” og så “Gi og fjern API tilganger”
+1. Trykk “Tilgang til programmeringsgrensesnitt - API” og så “Gi og fjern API tilganger”  
 ![image](https://github.com/3lbits/nrl-docs/assets/143094107/66d71683-6ba1-4c74-ad38-9e8510804410)
 1. Velg “+ Deleger nytt API”
 1. Søk opp “NRL Rapportering” fra Kartverket og trykk “+”
@@ -20,7 +21,7 @@ Daglig leder kan delegere rettigheter til å gi API-tilganger. Dette er kanskje 
 Fremgangsmåte:
 1. En person med tilgang til rollestyring (feks daglig leder) logger inn i Altinn. Velg å representere nettselskapet, ikke personen.
 1. Velg “Profil” øverst.
-1. Velg “Andre med tilgang til virksomheten” → “+ Legge til ny person eller virksomhet”
+1. Velg “Andre med tilgang til virksomheten” → “+ Legge til ny person eller virksomhet”  
 ![image](https://github.com/3lbits/nrl-docs/assets/143094107/ae82eca7-6c9f-4ff0-9bb1-7f90248ebadd)
 1. Ekspander “Har disse X rollene” og trykk “+Legg til ny rolle”
 1. Trykk på “Programmeringsgrensesnitt (API)”
@@ -28,6 +29,6 @@ Fremgangsmåte:
 
 ### For å fjerne delegering av tilgangsstyring
 1. Fra Profil → “Andre med tilgang til virksomheten”, velg “Gi eller fjern tilgang” på personen
-1. Velg “Fjern en eller flere rettigheter”
+1. Velg “Fjern en eller flere rettigheter”  
 ![image](https://github.com/3lbits/nrl-docs/assets/143094107/f7191d64-90bb-4fc3-b038-578fdb3d6b15)
 1. Fjern rollen og bekreft
